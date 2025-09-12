@@ -49,25 +49,25 @@ export const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-16 items-center px-4 md:px-6 lg:px-8">
         {/* Logo */}
-        <div className="mr-4 md:mr-8 flex items-center space-x-2">
+        <div className="mr-4 md:mr-6 lg:mr-8 flex items-center space-x-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary-hover">
             <span className="text-lg font-bold text-white">T</span>
           </div>
-          <span className="text-xl font-bold text-foreground hidden sm:block">TalentFlow</span>
+          <span className="text-xl font-bold text-foreground hidden sm:block md:text-xl lg:text-2xl">TalentFlow</span>
           <span className="text-lg font-bold text-foreground sm:hidden">TF</span>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop and Tablet Navigation */}
         {!isMobile && (
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
             <NavigationItems />
           </nav>
         )}
 
         {/* Right Side Actions */}
-        <div className="ml-auto flex items-center space-x-2">
+        <div className="ml-auto flex items-center space-x-2 md:space-x-3">
           {/* Settings Button */}
           <Button variant="outline" size="sm" className="hidden sm:flex">
             <Settings className="h-4 w-4 sm:mr-2" />
